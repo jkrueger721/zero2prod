@@ -55,7 +55,7 @@ async fn subribe_returns_a_200_for_valid_form_data() {
         .fetch_one(&mut connection)
         .await
         .expect("Failed to fetch saved subscription.");
-    
+
     assert_eq!(saved.email, "ursula_le_quin@gmail.com");
     assert_eq!(saved.name, "le guin");
 }
