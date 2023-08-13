@@ -22,7 +22,7 @@ DB_PASSWORD="${POSTGRES_PASSWORD:=password}"
 # Check if a custom database name has been set, otherwise default to 'newsletter'
 DB_NAME="${POSTGRES_DB:=newsletter}"
 # Check if a custom port has been set, otherwise default to '5432'
-DB_PORT="${POSTGRES_PORT:=5432}"
+DB_PORT="${POSTGRES_PORT:=8081}"
 # Check if a custom host has been set, otherwise default to 'localhost'
 DB_HOST="${POSTGRES_HOST:=localhost}"
 
@@ -41,7 +41,7 @@ then
       -e POSTGRES_USER=${DB_USER} \
       -e POSTGRES_PASSWORD=${DB_PASSWORD} \
       -e POSTGRES_DB=${DB_NAME} \
-      -p "${DB_PORT}":8080 \
+      -p "${DB_PORT}":5432 \
       -d \
       --name "postgres_$(date '+%s')" \
       postgres -N 1000
