@@ -7,9 +7,3 @@ database:
   username: "postgres"
   password: "password"
   database_name: "newsletter"
-#! confirguration/local.yaml
-application:
-  host: 127.0.0.1
-#! configuration /production.yaml
-application:
-  host: 0.0.0.0
