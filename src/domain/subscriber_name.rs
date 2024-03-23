@@ -27,8 +27,6 @@ impl SubscriberName {
 }
 
 mod tests {
-    
-    
 
     #[test]
     fn a_256_grapheme_long_name_is_valid() {
