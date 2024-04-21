@@ -27,9 +27,9 @@ impl SubscriberName {
 }
 
 mod tests {
-    
-    
-    
+    use super::SubscriberName;
+    use claims::assert_err;
+    use claims::assert_ok;
     #[test]
     fn a_256_grapheme_long_name_is_valid() {
         let name = "ë".repeat(256);
